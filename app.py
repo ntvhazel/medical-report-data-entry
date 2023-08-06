@@ -4,7 +4,6 @@ import numpy as np
 import requests
 import streamlit as st
 from PIL import Image, ImageEnhance, ImageOps
-from streamlit_cropper import st_cropper
 from PIL import Image
 import json
 import pandas as pd
