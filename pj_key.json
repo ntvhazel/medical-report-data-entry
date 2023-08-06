@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "steam-circlet-390215",
+  "private_key_id": "18612c5a71f897608990716fd95289224046105f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCS0kd3dtPqU+J0\n/NWKZyyt0LV9YmEOJvQABspRvBr4KLxbGZFb1ezwMEb8kgHe4TWoSFRUvUmtgjao\nGnZOlVbRk4GgtuK0rhLmhCm3CjknGbxYlkPXW5C4aPEus/ZMQFjEdh/YtPXJor4p\nAGpc3jfaSlA94fIsBI0+NOW3GTtWzS405mt1GDuknjlv92U0Ivvh03Qv/QmP8jFF\nTfWk4uOzC94nEqufqVv/Ev5Q+12gDSLmDecTWuAtZsrTEpdpY5MMcROhurs6bfOP\nRJrdcDN6DCuoMK2V+plOnD+vEh4+aVGxALlUK93ZZ8kvDUYDYEmMt6Kzsru30OKr\nwgmqvmglAgMBAAECggEARf31sOdWdgagVen0OMMfwwrUgl4Ea7U5K8wQ5i8Y4kW1\nKW7CY3fTuNsi9CP8vU46gKtefHkyZwNE4BWhYawC0+0QZlfZMo4rl3XY1xgKD/BO\nYCLeW4ucrbTliUCkgUxJpPq1Ct+VrpalNbGrgvMyyB8WKrIMe1x+IvIfso5WQfXc\nRlRVHR1xVWIQugqxgaq5KFUkXV4lEsLbjvrBU8W+Y+BiQ1dng0hA7X7jFyYOgf2K\nNT/MxlpTEvW7sGJajuUVq5o1li5htZGlTjbZxWhL273YPHEVQA5PhgRCu3YTCBg7\nOE1ANOJrDVlfMEzHPwy0vzNZpZAsY9QnOGuf/pvtfwKBgQDOQk2haQM5tH6cMoKB\n645OuZ9csQ/IYyhpyLVxcyYQC+g4XSg0S4y/bztHCBsgzT6vext1NbtE1GG3UdFb\n/fuODzpyso9uTHY3khriz1tD9M9qHZg1d4UvrhxIsDvVP7L4M3pKEWW2MARNqcQy\nLzTRK+gKMCh/kFKI6ZMFfmNbrwKBgQC2OoKjJ6ux7e60Gr1KENCZrfWXNw+/YRMQ\nPxGczPBenQaQ6rcHmjBAM5izFcCoIZp0VDqtsmISG9dWFHWFuoWhx3U2bhLON+15\n/NeVMAQ78PD2RoFU/Hg1z0oHtIozOvwmwdJ0Pd1ly1lf+8EMjdANQ2f0o6lr7d5/\ni14GmdHKawKBgF5H9n5SpzPIaptxhzBmAT3BIbRYB1Pc54s7QJ0kOoDZQIQLKSaG\nZkbXTGxSqzvaNc424r04G2sB/cyzLJT1SviLw3bMYj3T27HZKksE573veKQT9RBz\nmsDJwIoFbMQ0gtVrinmy7CBUYJMzh8g8xdLbVAzcKJbu3JtS0W6QcFBnAoGAL1BR\nyvrp4XDdoXWv4CMthjlcor5xIEecI4O8lvG/F1G9+rJ2g0rNbF35L8ZeF0liSQH1\nmlPOktUXvAnj2azsNW0MSe2ahGCREDNN5jZpYwbUCZ2UxvQmYhJILmf52gNepNF+\nSyAk8+Ewe3NqVFAdzNPLkgFMY/GG66bL6vrVNbECgYBAHsy3/21QwLievQB8YKiL\nvPSWuleFB2tbFhMb6ulYKgbAk6WAAc6ZVFRIDfzGMveOmZ15k9kUD9I0P2yeHjq2\nV+I31WftAnLDotDkjovi2CSD4XaQ8YLAc7AY3Ht8jHPE/QM8lOSy5SlKfwGYiPaq\nx2jKFCt+x23yZMXLCbQ3aw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "schoolproject@steam-circlet-390215.iam.gserviceaccount.com",
+  "client_id": "118316439836833960693",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/schoolproject%40steam-circlet-390215.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
