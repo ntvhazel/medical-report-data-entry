@@ -161,7 +161,11 @@ def inference(file_path):
     content = ""
     for i in temp_4:
         content += i+"\n"
- 
+    print(content)
+    content = content.replace("..", "")
+    content = content.replace("...", "")
+    content = content.replace("....", "")
+    content = content.replace(".....", "")
     
     for key, val in data.items():
         for i in val:
