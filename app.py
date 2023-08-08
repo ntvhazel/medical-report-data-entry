@@ -396,15 +396,11 @@ with contextlib.suppress(NameError):
 if ready:
     
         result = inference("final_image.png")
-        for keys in result.keys():
-            if result[keys] == "None" or result[keys] == "Null":
-                del result[keys]
-        print(result)
+        
         df = pd.DataFrame.from_dict(result, orient='index', columns=['Value'])
-        # df = df.transpose()
-        # st.write(df)
+
         edited_df = st.data_editor(df, key="data_editor", use_container_width =True)
-        # edited_df = edited_df.transpose()
+  
         final_result = pd.DataFrame.to_dict(edited_df)
         final_result = final_result['Value']
         # st.write(final_result)

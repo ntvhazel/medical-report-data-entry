@@ -169,10 +169,17 @@ def inference(file_path):
             content = content.replace(i, key+":")
 
     list = rearrange_list(content, field)
-    result = field_detect(content, list)
-    del result['print:']
-    del result['ommit:']
-    
+    temp_result = field_detect(content, list)
+    result = {}
+    # print(type(result["med_sum:"]))
+    for i in list:
+        if temp_result[i] != []:
+            merge(result, {i:temp_result[i]})
+    if "print:" in result:
+        del result["print:"]
+    if "ommit:" in result:
+        del result["ommit:"]
+    print(result)
     return result
 
 

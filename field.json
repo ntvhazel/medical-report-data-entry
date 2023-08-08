@@ -1,6 +1,6 @@
 {
     "name": ["Bệnh nhân:","Tên:", "Họ & tên:", "1. Họ và tên ( In hoa ):"],
-    "gender": ["Giới tính:", "Nam / Nữ:", "3. Giới:"],
+    "gender": ["Giới tính:", "Nam / Nữ:", "3. Giới:", "Giới tỉnh:"],
     "dob": ["2. Năm sinh:", "Năm sinh:"],
     "address": ["Địa chỉ:"],
     "contact": ["Di động:", "SĐT:", "Số điện thoại:"],
@@ -23,5 +23,5 @@
     "storage_id": ["Số lưu trữ:"],
     "status": ["TÌNH TRẠNG LÚC NHẬP VIỆN:"],
     "print": ["Nơi in:", "Not in"],
-    "ommit": ["II. Nội dung tóm tắt"]
+    "ommit": ["II. Nội dung tóm tắt", "I. Nội dung tóm tắt"]
 }
