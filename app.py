@@ -112,20 +112,21 @@ def perspective_transform(image, pts):
     return warped
 
 ready = False
-a, b, c, d, e, f, g, h, i, j, k = st.secrets["a"], st.secrets["b"], st.secrets["c"], st.secrets["d"], st.secrets["e"], st.secrets["f"], st.secrets["g"], st.secrets["h"], st.secrets["i"],st.secrets["k"]
-api_key = {
-    "type": a,
-    "project_id": b,
-    "private_key_id": c,
-    "private_key": d,
-    "client_email": e,
-    "client_id": f,
-    "auth_uri":g,
-    "token_uri":h,
-    "auth_provider_x509_cert_url":i,
-    "client_x509_cert_url":j,
-    "universe_domain":k
-}
+type = st.secrets["a"]
+st.write(type)
+# api_key = {
+#     "type": a,
+#     "project_id": b,
+#     "private_key_id": c,
+#     "private_key": d,
+#     "client_email": e,
+#     "client_id": f,
+#     "auth_uri":g,
+#     "token_uri":h,
+#     "auth_provider_x509_cert_url":i,
+#     "client_x509_cert_url":j,
+#     "universe_domain":k
+# }
 # ---------- OPERATIONS ----------
 option = st.radio(
     label="Upload an image, take one with your camera, or load image from a URL",
