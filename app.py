@@ -112,18 +112,19 @@ def perspective_transform(image, pts):
     return warped
 
 ready = False
+a, b, c, d, e, f, g, h, i, j, k = st.secrets["a"], st.secrets["b"], st.secrets["c"], st.secrets["d"], st.secrets["e"], st.secrets["f"], st.secrets["g"], st.secrets["h"], st.secrets["i"],st.secrets["k"]
 api_key = {
-    "type": st.secrets["a"],
-    "project_id": st.secrets["b"],
-    "private_key_id":st.secrets["c"],
-    "private_key":st.secrets["d"],
-    "client_email":st.secrets["e"],
-    "client_id":st.secrets["f"],
-    "auth_uri":st.secrets["g"],
-    "token_uri":st.secrets["h"],
-    "auth_provider_x509_cert_url":st.secrets["i"],
-    "client_x509_cert_url":st.secrets["j"],
-    "universe_domain":st.secrets["k"]
+    "type": a,
+    "project_id": b,
+    "private_key_id": c,
+    "private_key": d,
+    "client_email": e,
+    "client_id": f,
+    "auth_uri":g,
+    "token_uri":h,
+    "auth_provider_x509_cert_url":i,
+    "client_x509_cert_url":j,
+    "universe_domain":k
 }
 # ---------- OPERATIONS ----------
 option = st.radio(
