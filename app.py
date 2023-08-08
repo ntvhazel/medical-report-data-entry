@@ -138,7 +138,6 @@ api_key = {
     "universe_domain":universe_domain
 }
 
-st.write(api_key)
 # ---------- OPERATIONS ----------
 option = st.radio(
     label="Upload an image, take one with your camera, or load image from a URL",
