@@ -24,8 +24,12 @@ st.set_page_config(
     layout="wide",
 )
 
-
-
+mydb = mysql.connector.connect(
+host="localhost",
+user="root",
+password="",
+database="thesis"
+)
 
 
 
