@@ -396,6 +396,9 @@ with contextlib.suppress(NameError):
 if ready:
     
         result = inference("final_image.png")
+        for keys in result.keys:
+            if result[keys] == "None" or result[keys] == "Null":
+                del result[keys]
         df = pd.DataFrame.from_dict(result, orient='index', columns=['Value'])
         # df = df.transpose()
         # st.write(df)
