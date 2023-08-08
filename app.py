@@ -408,22 +408,22 @@ if ready:
         # edited_df = edited_df.transpose()
         final_result = pd.DataFrame.to_dict(edited_df)
         final_result = final_result['Value']
-        # st.write(final_result)
-        # if st.button("Lưu"):
-        #     columns = ', '.join("`" + str(x).replace(':', '') + "`" for x in final_result.keys())
-        #     values = ', '.join("'" + str(x) + "'" for x in final_result.values())
+        st.write(final_result)
+        if st.button("Lưu"):
+            columns = ', '.join("`" + str(x).replace(':', '') + "`" for x in final_result.keys())
+            values = ', '.join("'" + str(x) + "'" for x in final_result.values())
             
-        #     sql = "INSERT INTO %s ( %s ) VALUES ( %s );" % ('med_records', columns, values)
-        #     st.write(sql)
-        #     try:
-        #         cursor = mydb.cursor()
-        #         cursor.execute(sql)
-        #         mydb.commit()
-        #         st.success("Hoàn thành!")
-        #         time.sleep(3)
-        #         streamlit_js_eval(js_expressions="parent.window.location.reload()")
-        #     except mysql.connector.Error as error:
-        #         st.error("Có lỗi xảy ra!")
+            sql = "INSERT INTO %s ( %s ) VALUES ( %s );" % ('med_records', columns, values)
+            st.write(sql)
+            # try:
+            cursor = mydb.cursor()
+            cursor.execute(sql)
+            mydb.commit()
+            st.success("Hoàn thành!")
+            time.sleep(3)
+            streamlit_js_eval(js_expressions="parent.window.location.reload()")
+            # except mysql.connector.Error as error:
+            #     st.error("Có lỗi xảy ra!")
 
 
                 
