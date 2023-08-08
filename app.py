@@ -119,10 +119,10 @@ private_key_id = st.secrets["d"]
 client_email = st.secrets["e"]
 client_id = st.secrets["f"]
 auth_uri = st.secrets["g"]
-token_uri= st.secrets["h"]
-auth_provider_x509_cert_url= st.secrets["i"]
-client_x509_cert_url= st.secrets["j"]
-universe_domain= st.secrets["k"]
+token_uri = st.secrets["h"]
+auth_provider_x509_cert_url = st.secrets["i"]
+client_x509_cert_url = st.secrets["j"]
+universe_domain = st.secrets["k"]
 
 api_key = {
     "type": type,
@@ -137,6 +137,8 @@ api_key = {
     "client_x509_cert_url":client_x509_cert_url,
     "universe_domain":universe_domain
 }
+
+st.write(api_key)
 # ---------- OPERATIONS ----------
 option = st.radio(
     label="Upload an image, take one with your camera, or load image from a URL",
