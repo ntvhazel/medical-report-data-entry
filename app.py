@@ -1,31 +1,31 @@
-import contextlib
-from io import BytesIO
-import numpy as np
-import requests
-import streamlit as st
-from PIL import Image, ImageEnhance, ImageOps
-from PIL import Image
-import json
-import pandas as pd
-import imutils
-from skimage.filters import threshold_local
-import cv2
-import os
-from ocr import inference, merge
-import mysql.connector
-from streamlit_js_eval import streamlit_js_eval
-import time
+    import contextlib
+    from io import BytesIO
+    import numpy as np
+    import requests
+    import streamlit as st
+    from PIL import Image, ImageEnhance, ImageOps
+    from PIL import Image
+    import json
+    import pandas as pd
+    import imutils
+    from skimage.filters import threshold_local
+    import cv2
+    import os
+    from ocr import inference, merge
+    import mysql.connector
+    from streamlit_js_eval import streamlit_js_eval
+    import time
 
 
 
-st.set_page_config(
-    page_title="Nhập liệu bệnh án",
-    page_icon="🖼️",
-    layout="wide",
-)
+    st.set_page_config(
+        page_title="Nhập liệu bệnh án",
+        page_icon="🖼️",
+        layout="wide",
+    )
 
 
-try:
+
 
 
 
@@ -424,7 +424,6 @@ try:
             #         streamlit_js_eval(js_expressions="parent.window.location.reload()")
             #     except mysql.connector.Error as error:
             #         st.error("Có lỗi xảy ra!")
-except:
-    st.error("Có lỗi xảy ra!")
+
 
                 
