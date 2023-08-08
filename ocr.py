@@ -149,10 +149,10 @@ def field_detect(content, field):
             merge(final_result, {field[i]: result})
     return final_result
 
-def inference(file_path):
+def inference(api_key, file_path):
     # img = preprocess(file_path)
     data, field = read_json()
-    api_key = os.environ['API_KEY']
+    # api_key = os.environ['API_KEY']
     response = google_ocr(api_key, file_path)
     # content = text_extract(img)
     temp_1 = get_extended_annotations(response)
