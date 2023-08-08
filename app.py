@@ -113,20 +113,30 @@ def perspective_transform(image, pts):
 
 ready = False
 type = st.secrets["a"]
-st.write(type)
-# api_key = {
-#     "type": a,
-#     "project_id": b,
-#     "private_key_id": c,
-#     "private_key": d,
-#     "client_email": e,
-#     "client_id": f,
-#     "auth_uri":g,
-#     "token_uri":h,
-#     "auth_provider_x509_cert_url":i,
-#     "client_x509_cert_url":j,
-#     "universe_domain":k
-# }
+project_id = st.secrets["b"]
+private_key = st.secrets["c"]
+private_key_id = st.secrets["d"]
+client_email = st.secrets["e"]
+client_id = st.secrets["f"]
+auth_uri = st.secrets["g"]
+token_uri= st.secrets["h"]
+auth_provider_x509_cert_url= st.secrets["i"]
+client_x509_cert_url= st.secrets["j"]
+universe_domain= st.secrets["k"]
+
+api_key = {
+    "type": type,
+    "project_id": project_id,
+    "private_key_id": private_key_id,
+    "private_key": private_key,
+    "client_email": client_email,
+    "client_id": client_id,
+    "auth_uri":auth_uri,
+    "token_uri":token_uri,
+    "auth_provider_x509_cert_url":auth_provider_x509_cert_url,
+    "client_x509_cert_url":client_x509_cert_url,
+    "universe_domain":universe_domain
+}
 # ---------- OPERATIONS ----------
 option = st.radio(
     label="Upload an image, take one with your camera, or load image from a URL",
