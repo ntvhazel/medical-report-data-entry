@@ -7,7 +7,7 @@ opencv_python==4.8.0.74
 opencv_python_headless==4.8.0.74
 pandas==1.4.4
 Pillow==9.0.1
-protobuf==4.23.4
+protobuf==3.19.5
 Requests==2.31.0
 scipy==1.9.1
 scikit-image==0.21.0
