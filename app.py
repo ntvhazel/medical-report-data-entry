@@ -15,6 +15,7 @@ from ocr import inference, merge
 import mysql.connector
 from streamlit_js_eval import streamlit_js_eval
 import time
+from PIL import ImageOps
 
 
 
@@ -166,6 +167,7 @@ with contextlib.suppress(NameError):
         with st.container():
             lcol, rcol = st.columns(2)
             image = Image.fromarray(img_arr)
+            image = ImageOps.exif_transpose(image)
             right = 100
             left = 100
             top = 100
