@@ -13,7 +13,7 @@ def google_ocr(img_path):
     from google.cloud import vision
     import os
 
-    os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="D:\Thesis\LVTN_VanThanhThuan\src\pj_key.json"
+    os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="pj_key.json"
 
     client = vision.ImageAnnotatorClient()
 
