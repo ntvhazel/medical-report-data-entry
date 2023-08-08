@@ -1,6 +1,3 @@
-from azure.core.credentials import AzureKeyCredential
-from azure.ai.formrecognizer import DocumentAnalysisClient
-from azure.core.exceptions import HttpResponseError
 from PIL import Image
 import re
 import sys
