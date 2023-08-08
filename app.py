@@ -394,7 +394,6 @@ with contextlib.suppress(NameError):
         ):
             st.success(body="Image reset to original!", icon="↩️")
 if ready:
-    
         result = inference("final_image.png")
         
         df = pd.DataFrame.from_dict(result, orient='index', columns=['Value'])

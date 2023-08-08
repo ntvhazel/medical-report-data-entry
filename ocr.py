@@ -5,17 +5,20 @@ from Preprocess import preprocess
 import json
 from operator import attrgetter
 import numpy as np
+from google.oauth2 import service_account
 
 def merge(dict1, dict2):
     return dict1.update(dict2)
 
-def google_ocr(img_path):
+def google_ocr(api_key ,img_path):
     from google.cloud import vision
     import os
 
-    os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="pj_key.json"
+    # os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="pj_key.json"
+    
+    credentials = service_account.Credentials.from_service_account_info(api_key)
 
-    client = vision.ImageAnnotatorClient()
+    client = vision.ImageAnnotatorClient(credentials= credentials)
 
     with open(img_path, "rb") as image_file:
         content = image_file.read()
@@ -149,7 +152,8 @@ def field_detect(content, field):
 def inference(file_path):
     # img = preprocess(file_path)
     data, field = read_json()
-    response = google_ocr(file_path)
+    api_key = os.environ['API_KEY']
+    response = google_ocr(api_key, file_path)
     # content = text_extract(img)
     temp_1 = get_extended_annotations(response)
     temp_2 = get_threshold_for_y_difference(temp_1)
