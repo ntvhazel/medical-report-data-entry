@@ -399,6 +399,7 @@ if ready:
         for keys in result.keys():
             if result[keys] == "None" or result[keys] == "Null":
                 del result[keys]
+        print(result)
         df = pd.DataFrame.from_dict(result, orient='index', columns=['Value'])
         # df = df.transpose()
         # st.write(df)
