@@ -104,12 +104,5 @@ def preprocess(img_path):
     # equalize(img)
     
     path = "preprocess.jpg"
-    # gray_img = cv2.imread(path, cv2.IMREAD_GRAYSCALE)
-    # cv2.imwrite(path, gray_img)
     return path
 
-# img = skewcorrection(r'D:\Thesis\LVTN_VanThanhThuan\Dataset\Dataset_test2\test (43).jpg')
-# # a = cv2.imread(img)
-# plt.imshow(img)
-# plt.show()
-skewcorrection(r"D:\Thesis\LVTN_VanThanhThuan\Dataset\dataset_new1\z4588811180336_b01b35d8c89265a307f0a5785303e1a1.jpg")
