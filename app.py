@@ -4,7 +4,6 @@ import numpy as np
 import requests
 import streamlit as st
 from PIL import Image, ImageEnhance, ImageOps
-from PIL import Image
 import json
 import pandas as pd
 import imutils
@@ -15,7 +14,7 @@ from ocr import inference, merge
 import mysql.connector
 from streamlit_js_eval import streamlit_js_eval
 import time
-from PIL import ImageOps
+from Preprocess import skewcorrection
 
 
 
@@ -419,6 +418,7 @@ with contextlib.suppress(NameError):
         ):
             st.success(body="Image reset to original!", icon="↩️")
 if ready:
+        skewcorrection("final_image.png")
         result = inference(api_key ,"final_image.png")
         
         df = pd.DataFrame.from_dict(result, orient='index', columns=['Value'])

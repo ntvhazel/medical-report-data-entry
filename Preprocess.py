@@ -9,9 +9,9 @@ from skimage.filters import threshold_local
 
 np.seterr(divide='ignore', invalid='ignore')
 # read image as grayscale
-def skewcorrection (img):
+def skewcorrection (img_path):
     # convert to binary
-
+    img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)
     
    
     bin_img = 1 - (img.reshape((img.shape[0], img.shape[1])) / 255.0)
@@ -42,7 +42,7 @@ def skewcorrection (img):
 
 # rotate the image using cv2.warpAffine
     result = cv2.warpAffine(src=image1, M=rotate_matrix, dsize=(width, height))
-    return result
+    cv2.imwrite("final_image.png", result)
 
 def equalize(img):
     kernel1 = cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(9, 9))
@@ -112,3 +112,4 @@ def preprocess(img_path):
 # # a = cv2.imread(img)
 # plt.imshow(img)
 # plt.show()
+skewcorrection(r"D:\Thesis\LVTN_VanThanhThuan\Dataset\dataset_new1\z4588811180336_b01b35d8c89265a307f0a5785303e1a1.jpg")
