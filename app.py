@@ -15,7 +15,6 @@ import mysql.connector
 from streamlit_js_eval import streamlit_js_eval
 import time
 from Preprocess import skewcorrection
-from streamlit_super_slider import st_slider
 
 
 
@@ -242,8 +241,10 @@ with contextlib.suppress(NameError):
             # ---------- ROTATE ----------
             if "rotate_slider" not in st.session_state:
                 st.session_state["rotate_slider"] = 0
-            degrees = st_slider(
+            degrees = lcol.slider(
                 "Drag slider to rotate image clockwise 🔁",
+                min_value=0,
+                max_value=360,
                 value=st.session_state["rotate_slider"],
                 key="rotate_slider",
             )
