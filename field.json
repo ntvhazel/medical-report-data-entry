@@ -22,6 +22,6 @@
     "blood_type": ["Nhóm máu:"],
     "storage_id": ["Số lưu trữ:"],
     "status": ["TÌNH TRẠNG LÚC NHẬP VIỆN:"],
-    "print": ["Nơi in:", "Not in"],
+    "print": ["Nơi in:", "Not in", "Noi in:", "Noi in"],
     "ommit": ["II. Nội dung tóm tắt", "I. Nội dung tóm tắt"]
 }
