@@ -249,7 +249,7 @@ with contextlib.suppress(NameError):
                 value=st.session_state["rotate_slider"],
                 key="rotate_slider",
             )
-            rotated_img = image.rotate(360 - degrees)
+            rotated_img = image.rotate(360 - degrees, expand = True)
             lcol.image(
                 rotated_img,
                 use_column_width="auto",
