@@ -376,6 +376,7 @@ with contextlib.suppress(NameError):
                 warped_image = cv2.cvtColor(warped_image, cv2.COLOR_BGR2GRAY)
                     # image = warped_image
                 image = Image.fromarray(warped_image)
+                st.image(image)
                 image.save(img.name + "png")
                 ready = True
 
