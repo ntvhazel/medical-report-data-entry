@@ -244,8 +244,6 @@ with contextlib.suppress(NameError):
                 st.session_state["rotate_slider"] = 0
             degrees = st_slider(
                 "Drag slider to rotate image clockwise 🔁",
-                min_value=0,
-                max_value=360,
                 value=st.session_state["rotate_slider"],
                 key="rotate_slider",
             )
