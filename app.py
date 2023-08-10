@@ -242,7 +242,7 @@ with contextlib.suppress(NameError):
             # ---------- ROTATE ----------
             if "rotate_slider" not in st.session_state:
                 st.session_state["rotate_slider"] = 0
-            degrees = st_slider(
+            degrees = lcol.slider(
                 "Drag slider to rotate image clockwise 🔁",
                 value=st.session_state["rotate_slider"],
                 key="rotate_slider",
