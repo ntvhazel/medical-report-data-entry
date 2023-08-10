@@ -198,38 +198,41 @@ with contextlib.suppress(NameError):
             top = 100
             bottom = 100
             width, height = image.size
-
-            new_width = width + right + left
-            new_height = height + top + bottom
-                
-            result = Image.new(image.mode, (new_width, new_height), (0,0,0))
-            result.paste(image, (left, top))
-            result = np.asarray(result)
-            ratio = result.shape[0] / 500.0
-            img_resize = imutils.resize(result, height=500)
-            copy = result.copy()
-            gray_image = cv2.cvtColor(img_resize, cv2.COLOR_BGR2GRAY)
-                
-            blurred_image = cv2.GaussianBlur(gray_image, (5, 5), 0)
-            edged_img = cv2.Canny(blurred_image, 75, 200)
-            cnts, _ = cv2.findContours(edged_img, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
-            cnts = sorted(cnts, key=cv2.contourArea, reverse=True)[:5]
-            for c in cnts:
-                peri = cv2.arcLength(c, True)
-                approx = cv2.approxPolyDP(c, 0.02 * peri, True)
-                if len(approx) == 4:
-                    doc = approx
-                    break
+            try:
+                new_width = width + right + left
+                new_height = height + top + bottom
                     
-            p = []
-            for d in approx:
-                tuple_point = tuple(d[0])
-                cv2.circle(img_resize, tuple_point, 3, (0, 0, 255), 4)
-                p.append(tuple_point)
-            warped_image = perspective_transform(copy, doc.reshape(4, 2) * ratio)
-            warped_image = cv2.cvtColor(warped_image, cv2.COLOR_BGR2GRAY)
-                # image = warped_image
-            image = Image.fromarray(warped_image)
+                result = Image.new(image.mode, (new_width, new_height), (0,0,0))
+                result.paste(image, (left, top))
+                result = np.asarray(result)
+                ratio = result.shape[0] / 500.0
+                img_resize = imutils.resize(result, height=500)
+                copy = result.copy()
+                gray_image = cv2.cvtColor(img_resize, cv2.COLOR_BGR2GRAY)
+                    
+                blurred_image = cv2.GaussianBlur(gray_image, (5, 5), 0)
+                edged_img = cv2.Canny(blurred_image, 75, 200)
+                cnts, _ = cv2.findContours(edged_img, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+                cnts = sorted(cnts, key=cv2.contourArea, reverse=True)[:5]
+                for c in cnts:
+                    peri = cv2.arcLength(c, True)
+                    approx = cv2.approxPolyDP(c, 0.02 * peri, True)
+                    if len(approx) == 4:
+                        doc = approx
+                        break
+                        
+                p = []
+                for d in approx:
+                    tuple_point = tuple(d[0])
+                    cv2.circle(img_resize, tuple_point, 3, (0, 0, 255), 4)
+                    p.append(tuple_point)
+                warped_image = perspective_transform(copy, doc.reshape(4, 2) * ratio)
+                warped_image = cv2.cvtColor(warped_image, cv2.COLOR_BGR2GRAY)
+                    # image = warped_image
+                image = Image.fromarray(warped_image)
+            except:
+                image = ImageOps.exif_transpose(image)
+
         flag = True
 
 
