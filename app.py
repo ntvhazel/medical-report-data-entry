@@ -200,6 +200,7 @@ try:
 
             new_width = width + right + left
             new_height = height + top + bottom
+                
             result = Image.new(image.mode, (new_width, new_height), (0,0,0))
             result.paste(image, (left, top))
             result = np.asarray(result)
@@ -416,8 +417,6 @@ try:
             kwargs={"key": "all"},
         ):
             st.success(body="Image reset to original!", icon="↩️")
-except:
-    st.error("Ảnh không phù hợp !")
 if ready:
         skewcorrection("final_image.png")
         result = inference(api_key ,"final_image.png")
@@ -445,5 +444,6 @@ if ready:
             # except mysql.connector.Error as error:
             #     st.error("Có lỗi xảy ra!")
 
-
+except:
+    st.error("Ảnh không phù hợp !")
                 
