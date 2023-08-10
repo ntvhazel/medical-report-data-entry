@@ -6,7 +6,6 @@ import json
 from operator import attrgetter
 import numpy as np
 from google.oauth2 import service_account
-
 def merge(dict1, dict2):
     return dict1.update(dict2)
 
@@ -49,8 +48,6 @@ def get_extended_annotations(response):
     extended_annotations = []
     for annotation in response.text_annotations:
         extended_annotations.append(ExtendedAnnotation(annotation))
-
-    # delete last item, as it is the whole text I guess.
     del extended_annotations[0]
     return extended_annotations
 
@@ -162,7 +159,7 @@ def inference(api_key, file_path):
     content = ""
     for i in temp_4:
         content += i+"\n"
-    print(content)
+    print(content.replace("\n"," "))
     content = content.replace("..", "")
     content = content.replace("...", "")
     content = content.replace("....", "")
@@ -185,7 +182,6 @@ def inference(api_key, file_path):
         del result["ommit:"]
     print(result)
     return result
-
 
 
 
