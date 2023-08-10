@@ -106,4 +106,3 @@ def preprocess(img_path):
     path = "preprocess.jpg"
     return path
 
-skewcorrection(r"D:\Thesis\LVTN_VanThanhThuan\Dataset\dataset_new1\55.jpg")
