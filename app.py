@@ -200,10 +200,10 @@ with contextlib.suppress(NameError):
             lcol, rcol = st.columns(2)
             image = Image.fromarray(img_arr)
             image = ImageOps.exif_transpose(image)
-            right = 100
-            left = 100
-            top = 100
-            bottom = 100
+            right = 200
+            left = 200
+            top = 200
+            bottom = 200
             width, height = image.size
             try:
                 new_width = width + right + left
