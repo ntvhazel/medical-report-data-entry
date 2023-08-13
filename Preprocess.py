@@ -42,7 +42,7 @@ def skewcorrection (img_path):
 
 # rotate the image using cv2.warpAffine
     result = cv2.warpAffine(src=image1, M=rotate_matrix, dsize=(width, height))
-    cv2.imwrite("final_image.png", result)
+    cv2.imwrite("final_image.jpg", result)
 
 def equalize(img):
     kernel1 = cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(9, 9))
@@ -106,3 +106,4 @@ def preprocess(img_path):
     path = "preprocess.jpg"
     return path
 
+skewcorrection(r"D:\Thesis\LVTN_VanThanhThuan\Dataset\Dataset_test3\ba6_2.jpg")

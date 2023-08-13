@@ -138,6 +138,13 @@ api_key = {
     "universe_domain":universe_domain
 }
 
+mydb = mysql.connector.connect(
+  host=st.secrets["host"],
+  user=st.secrets["user"],
+  password=st.secrets["password"],
+  database=st.secrets["database"],
+)
+
 # ---------- OPERATIONS ----------
 option = st.radio(
     label="Upload an image, take one with your camera, or load image from a URL",
@@ -432,21 +439,20 @@ if ready:
         final_result = pd.DataFrame.to_dict(edited_df)
         final_result = final_result['Value']
         # st.write(final_result)
-        # if st.button("Lưu"):
-        #     columns = ', '.join("`" + str(x).replace(':', '') + "`" for x in final_result.keys())
-        #     values = ', '.join("'" + str(x) + "'" for x in final_result.values())
-            
-        #     sql = "INSERT INTO %s ( %s ) VALUES ( %s );" % ('med_records', columns, values)
-        #     st.write(sql)
-        #     # try:
-        #     cursor = mydb.cursor()
-        #     cursor.execute(sql)
-        #     mydb.commit()
-        #     st.success("Hoàn thành!")
-        #     time.sleep(3)
-        #     streamlit_js_eval(js_expressions="parent.window.location.reload()")
-            # except mysql.connector.Error as error:
-            #     st.error("Có lỗi xảy ra!")
+        if st.button("Lưu"):
+            columns = ', '.join("`" + str(x).replace(':', '') + "`" for x in final_result.keys())
+            values = ', '.join("'" + str(x) + "'" for x in final_result.values())
+            sql = "INSERT INTO %s ( %s ) VALUES ( %s );" % ('med_records', columns, values)
+            # st.write(sql)
+            try:
+                cursor = mydb.cursor()
+                cursor.execute(sql)
+                mydb.commit()
+                st.success("Hoàn thành!")
+                time.sleep(3)
+                streamlit_js_eval(js_expressions="parent.window.location.reload()")
+            except mysql.connector.Error as error:
+                st.error("Có lỗi xảy ra!")
 
 
                 
