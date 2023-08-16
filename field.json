@@ -14,7 +14,7 @@
     "med_history": ["Bệnh sử:", "Tiền sử bệnh ( ghi ngày chẩn đoán nếu có ):", "BỆNH SỬ:"],
     "clinical_result": ["Các kết quả lâm sàng chính:", "Lâm sàng:"],
     "paraclinical_result": ["Kết quả cận lâm sàng chính:", "Cận lâm sàng:"],
-    "diagnose": ["Chẩn đoán:", "Chẩn đoán bệnh chính:", "CHẨN ĐOÁN:", "Chẩn đoán lúc vào viện:"],
+    "diagnose": ["Chẩn đoán:", "Chẩn đoán bệnh chính:", "CHẨN ĐOÁN:", "Chẩn đoán lúc vào viện:", "Chẩn đoán bệnh chỉnh:"],
     "treatment": ["Điều trị:", "ĐIỀU TRỊ- DIỄN TIẾN"],
     "advise": ["Lời dặn:", "Dặn dò của Bác sỹ:", "Ghi chú:"],
     "re_exam": ["Hẹn tái khám:", "Tái khám:"],
