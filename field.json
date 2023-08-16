@@ -5,7 +5,7 @@
     "address": ["Địa chỉ:"],
     "contact": ["Di động:", "SĐT:", "Số điện thoại:"],
     "exam_date": ["Ngày khám bệnh:", "Ngày vào viện:"],
-    "doctor": ["BS khám bệnh:", "BS khám:"],
+    "doctor": ["BS khám bệnh:", "BS khám:", "B5 khám:"],
     "patient_id": ["Mã bệnh nhân:", "Mã BN:"],
     "exam_reason": ["Lý do khám bệnh:", "LÍ DO NHẬP VIỆN:"],
     "insurance": ["Mã BHYT:", "Mã số BHXH / Thẻ BHYT số:"],
