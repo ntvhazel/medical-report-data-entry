@@ -8,7 +8,7 @@
     "doctor": ["BS khám bệnh:", "BS khám:", "B5 khám:"],
     "patient_id": ["Mã bệnh nhân:", "Mã BN:"],
     "exam_reason": ["Lý do khám bệnh:", "LÍ DO NHẬP VIỆN:"],
-    "insurance": ["Mã BHYT:", "Mã số BHXH / Thẻ BHYT số:"],
+    "insurance": ["Mã BHYT:", "Mã số BHXH / Thẻ BHYT số:", "MÃ BHYT:"],
     "vital_sign": ["Sinh hiệu:"],
     "med_sum": ["Tóm tắt bệnh sử:", "Tóm tắt bệnh án:"],
     "med_history": ["Bệnh sử:", "Tiền sử bệnh ( ghi ngày chẩn đoán nếu có ):", "BỆNH SỬ:"],
