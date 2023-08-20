@@ -26,10 +26,14 @@ st.set_page_config(
 )
 
 
-
+VERSION = "1.0"
 
 # ---------- HEADER ----------
 st.title("Nhập liệu bệnh án")
+with open("sidebar.html", "r", encoding="UTF-8") as sidebar_file:
+    sidebar_html = sidebar_file.read().replace("{VERSION}", VERSION)
+with st.sidebar:
+    st.components.v1.html(sidebar_html, height=750)
 
 
 # ---------- FUNCTIONS ----------
